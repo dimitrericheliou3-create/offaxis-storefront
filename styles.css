@@ -534,23 +534,18 @@ body.offaxis-intro-active { overflow: hidden; }
   align-items: center; justify-content: center; padding: 26px;
 }
 .offaxis-intro-logo {
-  display: block; width: clamp(112px,18vw,168px); height: auto;
-  max-width: 70vw; max-height: 38vh; object-fit: contain;
+  display: block; width: clamp(260px,62vw,440px); height: auto;
+  max-width: 86vw; max-height: 42vh; overflow: visible;
   opacity: 0; transform: translateY(14px) scale(.88);
-  filter: grayscale(1);
+}
+.intro-star { fill: #fff; stroke: none; }
+.intro-logo-type {
+  font-family: var(--display); font-size: 69px; font-weight: 800;
+  letter-spacing: -5px; fill: #fff; stroke: #050505; stroke-width: 10px;
+  stroke-linejoin: round; paint-order: stroke fill;
 }
 .offaxis-intro.is-playing .offaxis-intro-logo {
   animation: offaxis-logo-reveal .72s .16s cubic-bezier(.2,.8,.2,1) forwards;
-}
-.offaxis-intro-word {
-  display: flex; gap: .14em; margin-top: 21px;
-  font: 800 clamp(32px,6vw,58px)/.85 var(--display);
-  letter-spacing: -.085em; white-space: nowrap;
-  clip-path: inset(0 100% 0 0);
-}
-.offaxis-intro-word span { font-weight: 500; }
-.offaxis-intro.is-playing .offaxis-intro-word {
-  animation: offaxis-word-reveal .5s .78s cubic-bezier(.2,.8,.2,1) forwards;
 }
 .offaxis-intro-tag {
   display: flex; align-items: center; gap: 10px; margin-top: 18px;
