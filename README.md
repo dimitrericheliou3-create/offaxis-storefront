@@ -64,3 +64,12 @@ The hero retains the earlier OffAxis Instagram reel: https://www.instagram.com/r
 ### Live Instagram profile embed
 
 The Reels page now includes an official Instagram profile embed for `@offaxis.758`, intended to expose more of the account's current public content, plus a direct link to the account's Reels tab. Instagram controls what the embed actually displays; when it does not load, the link opens Instagram directly. Only the two Reel URLs provided directly have been pinned as standalone reel cards rather than guessing at other post IDs.
+
+
+## Opening logo animation
+
+The homepage and Reels page now run a short black-and-white OFFAXIS logo reveal on first open per browser session. It draws the circular mark and diagonal slash, reveals the wordmark, and transitions into the page. Visitors can skip it; browsers set to reduced motion bypass it. This is a CSS recreation inspired by the closing logo treatment in the original supplied Reel, not an extracted frame-for-frame copy.
+
+## Additional supplied video
+
+The archive includes the supplied video post at https://www.instagram.com/p/DbH31iQR6dK/.
