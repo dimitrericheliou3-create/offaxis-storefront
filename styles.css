@@ -416,3 +416,28 @@ body { background: #fff; color: #050505; }
   .actual-photo-pending strong { font-size: clamp(20px,6vw,28px); }
   .visual-profile-link { font-size: 8px; }
 }
+
+
+/* Additional official reel, while retaining the original hero reel */
+.brand-reel-section { padding-top: 72px; padding-bottom: 78px; border-bottom: 1px solid var(--line); }
+.brand-reel-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-bottom: 27px; }
+.brand-reel-heading h2 { margin: 17px 0 0; font: 700 clamp(42px,6vw,68px)/.9 var(--display); letter-spacing: -.085em; }
+.brand-reel-heading h2 span { color: #858585; }
+.brand-reel-card { display: grid; grid-template-columns: minmax(260px,.9fr) 1.1fr; gap: clamp(25px,5vw,70px); align-items: center; padding: 20px; background: #f4f4f4; border: 1px solid #e3e3e3; }
+.brand-reel-embed-wrap { width: 100%; max-width: 430px; margin: 0 auto; overflow: hidden; background: #000; aspect-ratio: 9 / 14; }
+.brand-reel-embed { display: block; width: 100%; height: 100%; min-height: 420px; border: 0; background: #000; }
+.brand-reel-caption { max-width: 420px; padding: 15px 0; }
+.reel-number { color: #777; font: 500 9px var(--mono); letter-spacing: .1em; }
+.brand-reel-caption p { margin: 21px 0 25px; color: #555; font-size: 13px; line-height: 1.9; }
+.brand-reel-caption .button-dark { background: #050505; color: #fff; }
+.brand-reel-caption .button-dark:hover { background: #fff; color: #050505; border-color: #050505; }
+@media(max-width:760px) {
+  .brand-reel-section { padding-top: 58px; padding-bottom: 58px; }
+  .brand-reel-heading { align-items: flex-start; flex-direction: column; }
+  .brand-reel-heading h2 { font-size: clamp(42px,11vw,60px); }
+  .brand-reel-card { grid-template-columns: 1fr; gap: 17px; padding: 12px; }
+  .brand-reel-embed-wrap { max-width: 430px; aspect-ratio: 9 / 13; }
+  .brand-reel-embed { min-height: 390px; }
+  .brand-reel-caption { padding: 5px 4px 8px; }
+  .brand-reel-caption p { margin: 14px 0 20px; font-size: 11px; }
+}
