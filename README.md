@@ -11,7 +11,7 @@ A responsive streetwear storefront concept for OffAxis, built as a lightweight s
 - Cart saved in the visitor's browser
 - Checkout form that builds an order message and opens WhatsApp
 - Instagram and WhatsApp contact links
-- Official Instagram reel embed for brand media; catalogue image tiles are clearly marked placeholders until direct product photos are verifiably available
+- Monochrome SVG placeholder illustrations for sample tees and hoodies (not official product photos); the hero also embeds an official Instagram reel
 
 ## Important before publishing
 
