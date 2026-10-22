@@ -13,6 +13,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div class="offaxis-intro" id="offaxisIntro" aria-hidden="true">
+    <div class="offaxis-intro-lockup">
+      <svg class="offaxis-intro-emblem" viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="intro-ring" cx="60" cy="60" r="39"></circle>
+        <path class="intro-slash" d="M80 15 L40 105"></path>
+      </svg>
+      <div class="offaxis-intro-word">OFF<span>AXIS</span></div>
+      <div class="offaxis-intro-tag">758 <i></i> SAINT LUCIA</div>
+    </div>
+    <button class="offaxis-intro-skip" id="skipOffaxisIntro" type="button" tabindex="-1">SKIP INTRO ↗</button>
+    <span class="offaxis-intro-index">OFFAXIS / OPENING SEQUENCE</span>
+  </div>
+
   <div class="announcement-bar">
     <p><span class="pulse-dot"></span> SAINT LUCIA MADE DIFFERENT <span class="announcement-divider">/</span> <span class="announcement-detail">LOCAL ENERGY. OFFAXIS THINKING.</span></p>
     <a href="https://www.instagram.com/offaxis.758/" target="_blank" rel="noreferrer">FOLLOW THE DROP <span aria-hidden="true">↗</span></a>
@@ -115,6 +129,7 @@
   </section>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="intro.js"></script>
   <script src="products.js"></script>
   <script src="app.js"></script>
 </body>
