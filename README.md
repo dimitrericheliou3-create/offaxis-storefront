@@ -59,3 +59,8 @@ The hero retains the earlier OffAxis Instagram reel: https://www.instagram.com/r
 - `reels.html` is the dedicated monochrome reels page.
 - The homepage keeps the original hero reel; the second supplied reel and original reel are both listed on `reels.html`.
 - A link on the reels page opens the account's full public Instagram Reels tab. Instagram's full reel URLs are not all reliably indexed in search, so only the two reel URLs that have been directly supplied/verified are embedded on the site; the account's official reels page provides the complete and current archive.
+
+
+### Live Instagram profile embed
+
+The Reels page now includes an official Instagram profile embed for `@offaxis.758`, intended to expose more of the account's current public content, plus a direct link to the account's Reels tab. Instagram controls what the embed actually displays; when it does not load, the link opens Instagram directly. Only the two Reel URLs provided directly have been pinned as standalone reel cards rather than guessing at other post IDs.
