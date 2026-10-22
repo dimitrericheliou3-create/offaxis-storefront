@@ -271,7 +271,7 @@
   mobileNav.className = "mobile-nav";
   mobileNav.setAttribute("aria-label", "Mobile navigation");
   mobileNav.hidden = true;
-  mobileNav.innerHTML = '<a href="#shop">SHOP ↘</a><a href="#about">THE OFFAXIS MINDSET ↘</a><a href="#help">HELP / INFO ↘</a><a href="https://www.instagram.com/offaxis.758/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a>';
+  mobileNav.innerHTML = '<a href="#shop">SHOP ↘</a><a href="reels.html">REELS ↗</a><a href="#about">THE OFFAXIS MINDSET ↘</a><a href="#help">HELP / INFO ↘</a><a href="https://www.instagram.com/offaxis.758/" target="_blank" rel="noreferrer">INSTAGRAM ↗</a>';
   $(".site-header").appendChild(mobileNav);
   menuToggle.addEventListener("click", () => {
     const opening = mobileNav.hidden;
