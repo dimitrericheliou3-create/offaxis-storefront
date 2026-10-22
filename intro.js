@@ -9,19 +9,6 @@
     intro.remove();
   };
 
-  // Prefer the real Instagram avatar, with a wordmark fallback if the avatar
-  // service is unavailable or Instagram blocks the request.
-  const logo = intro.querySelector(".offaxis-intro-logo");
-  const fallback = intro.querySelector(".offaxis-intro-word");
-  const showFallback = () => {
-    if (logo) logo.hidden = true;
-    if (fallback) fallback.hidden = false;
-  };
-  if (logo && fallback) {
-    logo.addEventListener("error", showFallback, { once: true });
-    if (logo.complete && logo.naturalWidth === 0) showFallback();
-  }
-
   const skipButton = document.getElementById("skipOffaxisIntro");
   const reducedMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
