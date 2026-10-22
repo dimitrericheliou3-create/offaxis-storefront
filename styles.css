@@ -538,7 +538,7 @@ body.offaxis-intro-active { overflow: hidden; }
   max-width: 86vw; max-height: 42vh; overflow: visible;
   opacity: 0; transform: translateY(14px) scale(.88);
 }
-.intro-star { fill: #fff; stroke: none; }
+.intro-star { fill: #050505; stroke: rgba(255,255,255,.72); stroke-width: 1.5; }
 .intro-logo-type {
   font-family: var(--display); font-size: 69px; font-weight: 800;
   letter-spacing: -5px; fill: #fff; stroke: #050505; stroke-width: 10px;
