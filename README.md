@@ -52,3 +52,10 @@ This repository contains the website files in its root. It can be published as a
 ## Official visual assets
 
 The hero retains the earlier OffAxis Instagram reel: https://www.instagram.com/reel/DUwm2sckYrg/. A second dedicated section includes the newer user-supplied reel: https://www.instagram.com/reel/DUak5xTEVUE/. Both link to https://www.instagram.com/offaxis.758/. A targeted public image search did not surface a reliably verifiable direct logo file or individual product-photo URLs for this exact Saint Lucian account, so the site no longer pretends generated artwork is actual apparel and does not use unrelated brands' images. Replace the wordmark with an owner-approved logo file and replace each catalogue placeholder with approved product photos as soon as the owner provides them or exact public image URLs can be verified.
+
+
+## Reels page
+
+- `reels.html` is the dedicated monochrome reels page.
+- The homepage keeps the original hero reel; the second supplied reel and original reel are both listed on `reels.html`.
+- A link on the reels page opens the account's full public Instagram Reels tab. Instagram's full reel URLs are not all reliably indexed in search, so only the two reel URLs that have been directly supplied/verified are embedded on the site; the account's official reels page provides the complete and current archive.
