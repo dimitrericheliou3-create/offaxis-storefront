@@ -11,7 +11,7 @@ A responsive streetwear storefront concept for OffAxis, built as a lightweight s
 - Cart saved in the visitor's browser
 - Checkout form that builds an order message and opens WhatsApp
 - Instagram and WhatsApp contact links
-- Product artwork drawn as editable SVG illustrations (these are concept mockups, not confirmed product photography)
+- Official Instagram reel embed for brand media; catalogue image tiles are clearly marked placeholders until direct product photos are verifiably available
 
 ## Important before publishing
 
@@ -48,3 +48,7 @@ Edit `WHATSAPP_NUMBER` at the top of `app.js`. Use digits only, including countr
 ## Deploy
 
 This repository contains the website files in its root. It can be published as a static site using GitHub Pages or connected to Cloudflare Pages/Netlify. No build command is needed. For Cloudflare Pages, set the root directory to `/` and leave the build command empty.
+
+## Official visual assets
+
+The hero uses the official Instagram reel supplied for the brand: https://www.instagram.com/reel/DUwm2sckYrg/ and links to https://www.instagram.com/offaxis.758/. A targeted public image search did not surface a reliably verifiable direct logo file or individual product-photo URLs for this exact Saint Lucian account, so the site no longer pretends generated artwork is actual apparel and does not use unrelated brands' images. Replace the wordmark with an owner-approved logo file and replace each catalogue placeholder with approved product photos as soon as the owner provides them or exact public image URLs can be verified.
