@@ -60,15 +60,28 @@
   }
 
   function productArtwork(product, color) {
-    // Use truthful placeholders until official product-photo URLs are supplied or indexed.
-    // The homepage uses an embedded reel from the brand's public Instagram account.
-    const chosenColor = color || product.colors[0];
-    return '<div class="actual-photo-pending" role="img" aria-label="Official photo of ' + escapeHTML(product.name) + ' not yet available">' +
-      '<span class="actual-photo-kicker">OFFAXIS / 758</span>' +
-      '<strong>REAL<br>PIECES.<br>REAL PEOPLE.</strong>' +
-      '<small>OFFICIAL PHOTOS NOT VERIFIED</small>' +
-      '<a href="https://www.instagram.com/offaxis.758/" target="_blank" rel="noreferrer" aria-label="View real OffAxis products on Instagram">VIEW INSTAGRAM ↗</a>' +
-      '</div>';
+    const fill = (color || product.colors[0]).hex;
+    const ink = readableInk(fill);
+    const hoodie = product.category === "hoodie";
+    const body = hoodie
+      ? "M147 100 L105 117 L51 188 L95 222 L126 183 L126 383 Q200 406 274 383 L274 183 L305 222 L349 188 L295 117 L253 100 Q244 132 200 132 Q156 132 147 100Z"
+      : "M145 96 L101 113 L48 186 L96 222 L127 183 L124 383 Q200 403 276 383 L273 183 L304 222 L352 186 L299 113 L255 96 Q242 130 200 130 Q158 130 145 96Z";
+    let print = '<text x="200" y="226" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="800" letter-spacing="3" fill="' + ink + '">OFFAXIS</text><path d="M154 240 H246" stroke="' + ink + '" stroke-width="2"/><text x="200" y="261" text-anchor="middle" font-family="monospace" font-size="8" letter-spacing="2" fill="' + ink + '">BORN TO SHIFT</text><path d="M200 284 L214 298 L200 312 L186 298Z" fill="#ffffff" stroke="' + ink + '" stroke-width="1.5"/>';
+    if (product.art === "kweyol") {
+      print = '<text x="200" y="220" text-anchor="middle" font-size="24" font-weight="800" fill="' + ink + '">BONNE</text><text x="200" y="246" text-anchor="middle" font-size="24" font-weight="800" fill="' + ink + '">KWEYÒL</text><path d="M160 261 H240" stroke="' + ink + '" stroke-width="2"/><text x="200" y="280" text-anchor="middle" font-family="monospace" font-size="8" letter-spacing="2" fill="' + ink + '">758 · SAINT LUCIA</text>';
+    } else if (product.art === "minimal") {
+      print = '<circle cx="200" cy="230" r="19" fill="none" stroke="' + ink + '" stroke-width="2"/><path d="M207 211 L193 249" stroke="' + ink + '" stroke-width="4"/><text x="200" y="278" text-anchor="middle" font-size="12" font-weight="800" letter-spacing="4" fill="' + ink + '">OFFAXIS</text>';
+    } else if (product.art === "hoodie") {
+      print = '<text x="200" y="222" text-anchor="middle" font-size="27" font-weight="800" fill="' + ink + '">O/</text><text x="200" y="250" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="2" fill="' + ink + '">HEAVY ON PERSPECTIVE</text>';
+    } else if (product.art === "core") {
+      print = '<text x="200" y="220" text-anchor="middle" font-size="20" font-weight="800" letter-spacing="2" fill="' + ink + '">OFF AXIS</text><path d="M152 235 H248" stroke="' + ink + '" stroke-width="3"/><text x="200" y="256" text-anchor="middle" font-family="monospace" font-size="8" fill="' + ink + '">MAKE YOUR OWN WAY</text>';
+    } else if (product.art === "afterhours") {
+      print = '<text x="200" y="221" text-anchor="middle" font-size="22" font-weight="800" letter-spacing="2" fill="' + ink + '">AFTER</text><text x="200" y="248" text-anchor="middle" font-size="22" font-weight="800" letter-spacing="2" fill="' + ink + '">HOURS</text><text x="200" y="279" text-anchor="middle" font-family="monospace" font-size="8" fill="' + ink + '">758 / 001</text>';
+    }
+    const neckline = hoodie
+      ? '<path d="M154 100 Q153 48 200 42 Q247 48 246 100 L228 121 L172 121Z" fill="' + fill + '" stroke="' + ink + '" stroke-opacity=".3" stroke-width="2"/><path d="M174 87 Q180 60 200 58 Q220 60 226 87" fill="none" stroke="' + ink + '" stroke-opacity=".4" stroke-width="3"/>'
+      : '<path d="M169 98 Q176 134 200 134 Q224 134 231 98" fill="none" stroke="' + ink + '" stroke-opacity=".36" stroke-width="9" stroke-linecap="round"/><path d="M170 98 Q178 126 200 126 Q222 126 230 98" fill="none" stroke="' + fill + '" stroke-width="4"/>';
+    return '<svg class="product-art" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder illustration of ' + escapeHTML(product.name) + ' in ' + escapeHTML((color || product.colors[0]).name) + ', not a verified product photo"><defs><filter id="shadow-' + product.id + '" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="9" flood-color="#000000" flood-opacity=".18"/></filter><linearGradient id="fabric-' + product.id + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#000000" stop-opacity=".13"/></linearGradient></defs><g filter="url(#shadow-' + product.id + ')"><path d="' + body + '" fill="' + fill + '" stroke="' + ink + '" stroke-opacity=".2" stroke-width="1.5"/><path d="' + body + '" fill="url(#fabric-' + product.id + ')"/>' + neckline + print + '</g><text x="200" y="424" text-anchor="middle" font-family="monospace" font-size="8" letter-spacing="3" fill="' + ink + '" opacity=".62">OFFAXIS / 758</text></svg>';
   }
 
   function updateFilters() {
